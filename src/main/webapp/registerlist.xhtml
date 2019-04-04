@@ -1,51 +1,58 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
 
-	<ui:composition template="/WEB-INF/template.xhtml">
+<ui:composition template="/WEB-INF/template.xhtml">
 	<ui:define name="hotel">Register list</ui:define>
-		<ui:define name="content">
-		<h:form>
-			<h:outputLabel value="Room" styleClass="mr-3"/>
-			<h:selectOneMenu styleClass="custom-checkbox"></h:selectOneMenu>
-			
-			
-			<h:outputLabel value="Customer" styleClass="ml-4"/>
-			<h:inputText styleClass="form-check-label ml-3" p:placeholder="Customer Name" />
-				
-				<h:commandLink styleClass="btn btn-outline-danger ml-4"> 
-					<i class="fa fa-search-plus"></i>Search
-				</h:commandLink>		
-				
-				<h:dataTable styleClass="mt-3 table table-striped text-white">
-					<h:column>
-						<f:facet name="header">ID</f:facet>
-					</h:column>
-					
-					
-					<h:column>
-						<f:facet name="header">Customer</f:facet>
-					</h:column>
-					
-					
-					<h:column>
-						<f:facet name="header">Room</f:facet>
-					</h:column>
-					
-					
-					<h:column>
-						<f:facet name="header">Check In</f:facet>
-					</h:column>
-					
-					
-					<h:column>
-						<f:facet name="header">Check Out</f:facet>
-					</h:column>
-				</h:dataTable>
-			</h:form>
-		</ui:define>
-	</ui:composition>
+	<ui:define name="content">
+
+		<h:form styleClass="form-inline">
+
+			<div class="form-group mr-4">
+				<h:outputLabel value="Room" styleClass="mr-3" />
+				<h:selectOneMenu styleClass="custom-checkbox form-control"></h:selectOneMenu>
+			</div>
+
+			<div class="form-group mr-4">
+				<h:outputLabel value="Customer" styleClass="ml-4" />
+				<h:inputText styleClass="form-control ml-3"
+					p:placeholder="Customer Name" />
+			</div>
+
+			<h:commandLink styleClass="btn btn-outline-danger ml-4">
+				<i class="fa fa-search-plus"></i>Search
+				</h:commandLink>
+		</h:form>
+
+		<h:dataTable styleClass="mt-3 table table-striped text-white">
+			<h:column>
+				<f:facet name="header">ID</f:facet>
+			</h:column>
+
+
+			<h:column>
+				<f:facet name="header">Customer</f:facet>
+			</h:column>
+
+
+			<h:column>
+				<f:facet name="header">Room</f:facet>
+			</h:column>
+
+
+			<h:column>
+				<f:facet name="header">Check In</f:facet>
+			</h:column>
+
+
+			<h:column>
+				<f:facet name="header">Check Out</f:facet>
+			</h:column>
+		</h:dataTable>
+
+	</ui:define>
+</ui:composition>
 </html>
